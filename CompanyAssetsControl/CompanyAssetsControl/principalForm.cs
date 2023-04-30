@@ -10,11 +10,49 @@ using System.Windows.Forms;
 
 namespace CompanyAssetsControl
 {
-    public partial class Form1 : Form
+    public partial class principalForm : Form
     {
-        public Form1()
+        public enum STEP_SET_EXECUTION
+        {
+            NONE,
+            INITIALIZE,
+            SHOW_SCREEN,
+            FINISH
+        }
+
+        public STEP_SET_EXECUTION stepSet = STEP_SET_EXECUTION.INITIALIZE;
+
+        public principalForm()
         {
             InitializeComponent();
+        }
+
+        public void Executar()
+        {
+            switch (stepSet)
+            {
+                case STEP_SET_EXECUTION.NONE:
+                    {
+                        break;
+                    }
+                case STEP_SET_EXECUTION.INITIALIZE:
+                    {
+                        break;
+                    }
+                case STEP_SET_EXECUTION.SHOW_SCREEN:
+                    {
+                        break;
+                    }
+                case STEP_SET_EXECUTION.FINISH:
+                    {
+                        break;
+                    }
+            }
+        }
+
+        private void tmrExecution_Tick(object sender, EventArgs e)
+        {
+            Executar();
         }
     }
 }
